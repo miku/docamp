@@ -7,7 +7,7 @@ To test manually, use a minimal SOLR setup, e.g. https://github.com/hsch/solr-mi
 
 Adjust solrconfig.xml:
 
-```
+```xml
 ...
 <lib dir="../../contrib/lib" regex=".*\.jar" />
 
@@ -19,14 +19,14 @@ Adjust solrconfig.xml:
 
 In the startup logs you should see something like:
 
-```
+```shell
 1162 [coreLoadExecutor-3-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  - ...
    Adding 'file:/xxxx/xxxx/code/hsch/solr-minimal/contrib/lib/docamp-1.0-SNAPSHOT.jar' to classloader
 ```
 
 Basic query:
 
-```
+```json
 {
   "responseHeader": {
     "status": 0,
