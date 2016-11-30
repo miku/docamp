@@ -5,7 +5,19 @@ Playing with SOLR document transformations.
 
 To test manually, use a minimal SOLR setup, e.g. https://github.com/hsch/solr-minimal.
 
-Adjust solrconfig.xml, in the logs you should see something like:
+Adjust solrconfig.xml:
+
+```
+...
+<lib dir="../../contrib/lib" regex=".*\.jar" />
+
+<transformer name="example" class="de.ubleipzig.solr.transform.HelloTransformerFactory">
+    <str name="location">Russia</str>
+</transformer>
+...
+```
+
+In the startup logs you should see something like:
 
 ```
 1162 [coreLoadExecutor-3-thread-1] INFO  org.apache.solr.core.SolrResourceLoader  - ...
