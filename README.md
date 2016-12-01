@@ -5,6 +5,12 @@ Playing with SOLR document transformations.
 
 To test manually, use a minimal SOLR setup, e.g. https://github.com/hsch/solr-minimal.
 
+Copy artefact, so SOLR can load it:
+
+```shell
+$ cp target/docamp-1.0-SNAPSHOT.jar ../../path/to/solr/contrib/lib
+```
+
 Adjust solrconfig.xml:
 
 ```xml
