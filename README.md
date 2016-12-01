@@ -11,6 +11,12 @@ Copy artefact, so SOLR can load it:
 $ cp target/docamp-1.0-SNAPSHOT.jar ../../path/to/solr/contrib/lib
 ```
 
+Example rebuild and deploy:
+
+```
+$ mvn clean package && cp target/docamp-1.0-SNAPSHOT.jar ../../hsch/solr-minimal/contrib/lib/
+```
+
 Adjust solrconfig.xml:
 
 ```xml
